@@ -1,3 +1,59 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "prettier" // Add "prettier" last. This will turn off eslint rules conflicting with prettier. This is not what will format our code.
+  ],
+  "plugins": ["@typescript-eslint", "simple-import-sort"],
+  "rules": {
+    "template-curly-spacing": ["warn", "never"],
+    "indent": ["warn", 2, {"ignoredNodes": ["TemplateLiteral"]}],
+    "quotes": ["warn", "double"],
+    "no-unused-vars": "warn",
+    "import/no-useless-path-segments": "off",
+    "import/no-unresolved": "off",
+    "semi": [2, "always"],
+    "import/no-anonymous-default-export": ["error", {
+      "allowArray": true,
+      "allowArrowFunction": false,
+      "allowAnonymousClass": false,
+      "allowAnonymousFunction": false,
+      "allowCallExpression": true, // The true value here is for backward compatibility
+      "allowLiteral": false,
+      "allowObject": true
+    }],
+    "max-len": [ 1, 150, 2, {
+      "ignoreUrls": true,
+      "ignoreStrings": true,
+      "ignoreTemplateLiterals": true,
+      "ignoreComments": false
+    }],
+    "prefer-const": "warn", // rewrite @typescript-eslint -> just warning
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error"
+  },
+  "overrides": [
+    {
+      "files": ["**/*.ts?(x)"],
+      "rules": {
+        "simple-import-sort/imports": [
+          "warn",
+          {
+            "groups": [
+              // Packages. `react` related packages come first.
+              // Things that start with a letter (or digit or underscore), or `@` followed by a letter.
+              ["^react", "^@?\\w"],
+              // Internal packages: Absolute imports and Relative imports.
+              ["^(@|@shared|@store|@redux|@features)(/.*|$)", "^\\.", "^.+\\.s?css$"]
+              // Style imports.
+              // ["^.+\\.s?css$"]
+            ]
+          }
+        ]
+      }
+    }
+  ]
 }

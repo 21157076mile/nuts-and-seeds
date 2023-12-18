@@ -1,20 +1,48 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: "class", // or 'media' or 'class'
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    // "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/shared/ui-components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        primary: "#f57264", // orange vitaminC
+        secondary: "#042045",
+        tertiary: "#27b5cf", // blue
+        // highlight: '#ddd0fe',
+        // light: '#fefefe',
+        // dark: "#6658fe",
+        lavender: "#9e81bf", // "#b392f0",
+        mint: "#95bfac",
+        amber: "#d3ad57", //"#fca311",
+      },
+
+      animation: {
+        background: "background 2s ease-in-out infinite",
+        linear: "backgroundLinear 3s linear infinite",
+        slide: "backgroundSlide 120s linear infinite alternate-reverse forwards;",
+      },
+      keyframes: {
+        background: {
+          "0%, 100%": { backgroundPosition: "left 0% bottom 0%" },
+          "50%": { backgroundPosition: "left 200% bottom 0%" },
+        },
+        backgroundLinear: {
+          "0%": { backgroundPosition: "0% 50%" },
+          "100%": { backgroundPosition: "200% 50%" },
+        },
+        backgroundSlide: {
+          "0%": { backgroundPosition: "0 0%" },
+          "100%": { backgroundPosition: "100% 50%" },
+        },
       },
     },
   },
   plugins: [],
-}
-export default config
+};
+export default config;

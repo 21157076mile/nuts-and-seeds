@@ -1,6 +1,22 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+
+## 🐣 Get started
+
+1. Install dependencies
+
+```bash
+npm i
+# or
+yarn
+```
+
+2. ❗ don't forget to run `yarn husky install .config/husky` to enable husky
+   (you can use **npx** instead **yarn**)
+
+「 `npx husky add .config/husky/pre-commit "npx lint-staged"` 」
+
+3. Run the development server:
 
 First, run the development server:
 
@@ -8,10 +24,6 @@ First, run the development server:
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
