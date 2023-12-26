@@ -23,12 +23,25 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
+input:focus {
+  outline:none;
+}
+
+.svg-icon {
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  user-select: none;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+// body {
+  // color: rgb(var(--foreground-rgb));
   // background: linear-gradient(
   //     to bottom,
   //     transparent,
   //     rgb(var(--background-end-rgb))
   //   )
   //   rgb(var(--background-start-rgb));
-}
+// }

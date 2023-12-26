@@ -26,10 +26,10 @@ git commit -m "skipping hooks" --no-verify
 
 # Prettier
 
-- prettier-plugin-tailwindcss,
 - sort order: base layer - components layer - utilities layer
+- prettier-plugin-tailwindcss, → no need, auto with prettier 3.
 
 # Q&A
 
-I don't see `.prettierrc.json`
+Sometimes, we don't add `.prettierrc.json`
 → because we use all default of Prettier, no modification.

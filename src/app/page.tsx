@@ -1,30 +1,13 @@
-// import { useEffect } from "react";
-// import { useDispatch } from "react-redux";
-// import Image from "next/image";
-
-// import { getCatsFetch } from "@redux/slices/catSlice/catState";
-import HeroBanner from "@shared/ui-components/hero-banner";
-import TopBar from "@shared/ui-components/top-bar";
+import HeroBanner from "@shared/templates/hero-banner";
+import TopBar from "@shared/templates/top-bar";
 import Header from "./common/Header";
 
 export default function Home() {
-
-  // const dispatch = useDispatch();
-
-  // useEffect(() => {
-  //   dispatch(getCatsFetch());
-  // }, []);
-
-
   return (
-    <main className="flex min-h-screen flex-col items-center">
+    <div className="flex min-h-screen flex-col items-center">
       <TopBar />
       <Header />
-
-
-
-
-      <HeroBanner className="mt-8"/>
+      <HeroBanner />
 
 
       <div className="mb-32 grid text-center container lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
@@ -96,6 +79,6 @@ export default function Home() {
           </p>
         </a>
       </div>
-    </main>
+    </div>
   );
 }

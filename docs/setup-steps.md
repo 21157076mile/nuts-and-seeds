@@ -1,5 +1,5 @@
 
-# TUTORIALS \_\_ SETUP
+# GUIDE \_\_ SETUP
 
 
 ## Setup

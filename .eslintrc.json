@@ -29,6 +29,7 @@
       "ignoreComments": false
     }],
     "prefer-const": "warn", // rewrite @typescript-eslint -> just warning
+    "@typescript-eslint/no-unused-vars": "warn",
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
     "import/first": "error",
@@ -47,7 +48,7 @@
               // Things that start with a letter (or digit or underscore), or `@` followed by a letter.
               ["^react", "^@?\\w"],
               // Internal packages: Absolute imports and Relative imports.
-              ["^(@|@shared|@store|@redux|@features)(/.*|$)", "^\\.", "^.+\\.s?css$"]
+              ["^(@|@shared|@config|@rtk-slices)(/.*|$)", "^\\.", "^.+\\.s?css$"]
               // Style imports.
               // ["^.+\\.s?css$"]
             ]

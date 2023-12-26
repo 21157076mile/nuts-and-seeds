@@ -19,6 +19,9 @@
 - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 - [Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory)
 - [JavaScript (ES6) code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets)
+- An AI Assistant, like Copilot, TabNine, Kite, ...
+
+### Auto supported by VSCode
 - Bracket Pair Color - This functionality is now [built-in](https://code.visualstudio.com/blogs/2021/09/29/bracket-pair-colorization) to VS Code. Configure these settings to use this functionality
   ↳ Bracket Pair colorizing: `@id:editor.bracketPairColorization.enabled @id:editor.guides.bracketPairs`
 

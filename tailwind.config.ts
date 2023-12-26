@@ -4,13 +4,17 @@ const config: Config = {
   darkMode: "class", // or 'media' or 'class'
   content: [
     // "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    // "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/shared/ui-components/**/*.{js,ts,jsx,tsx}",
+    "./src/shared/templates/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       colors: {
+        /**
+         * need to define a color palette,
+         *  - need a variety (5-10) of lighter and darker shades to choose from.
+         */
         primary: "#f57264", // orange vitaminC
         secondary: "#042045",
         tertiary: "#27b5cf", // blue
@@ -19,8 +23,11 @@ const config: Config = {
         // dark: "#6658fe",
         lavender: "#9e81bf", // "#b392f0",
         mint: "#95bfac",
-        amber: "#d3ad57", //"#fca311",
+        // amber: "#d3ad57", //"#fca311",
       },
+      // backgroundColor: {
+      //   highlight: "#f57264",
+      // },
 
       animation: {
         background: "background 2s ease-in-out infinite",
