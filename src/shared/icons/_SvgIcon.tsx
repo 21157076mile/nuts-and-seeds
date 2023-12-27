@@ -4,12 +4,13 @@ import clsx from "clsx";
 type Props = {
   children: React.ReactNode;
   className?: string;
-  // width?: string | number;
-  // height?: string | number;
+  width?: string | number;
+  height?: string | number;
   titleAccess?: string;
   viewBox?: string; // @default '0 0 24 24'
   fontSize?: number | string;
   color?: string;
+  fill?: string;
   style?: React.CSSProperties;
 } & React.PropsWithoutRef<React.SVGProps<SVGSVGElement>>
 & React.RefAttributes<SVGSVGElement>;
@@ -20,8 +21,9 @@ function SvgIcon(props: Props, ref: React.ForwardedRef<SVGSVGElement>) {
     style,
     className,
     titleAccess,
-    // width,
-    // height,
+    width = "1em",
+    height = "1em",
+    fill = "currentColor",
     fontSize = 24,
     color = "inherit",
     viewBox = "0 0 24 24",
@@ -36,8 +38,9 @@ function SvgIcon(props: Props, ref: React.ForwardedRef<SVGSVGElement>) {
       className={clsx("svg-icon", className)}
       focusable="false"
       viewBox={viewBox}
-      // width={width}
-      // height={height}
+      width={width}
+      height={height}
+      fill={fill}
       color={color}
       fontSize={fontSize}
       ref={ref}

@@ -18,7 +18,7 @@ function PasswordInput(
         ref={ref}
       />
       <label
-        className="absolute inset-y-0 right-0 flex items-center px-4 text-xs font-medium text-gray-600 uppercase cursor-pointer select-none"
+        className="absolute inset-y-0 right-0 flex items-center px-4 text-xs font-medium text-gray-600 uppercase cursor-pointer select-none dark:text-stone-400"
         onClick={togglePasswordVisibility}
         htmlFor="password"
       >

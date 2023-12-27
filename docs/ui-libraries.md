@@ -15,3 +15,8 @@ you can find all UI libraries in package.json, but I still list here.
 
 - layout
 https://tailwindcss.com/docs/container
+
+### tasks
+
+- make dark/light/system mode
+- make responsive menu

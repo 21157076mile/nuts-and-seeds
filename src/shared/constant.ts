@@ -5,4 +5,5 @@ export const LOCAL_STORAGE_KEY = {
   accessToken: `${prefixStorageKey}_access_token`,
   currentUser: `${prefixStorageKey}_current_user`,
   version: `${prefixStorageKey}_version`, // not-use
+  uiTheme: `${prefixStorageKey}_theme`,
 };

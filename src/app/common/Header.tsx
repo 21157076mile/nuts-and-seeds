@@ -2,6 +2,7 @@ import dynamic from "next/dynamic";
 
 const SignInHeader = dynamic(() => import("./SignInHeader"), { ssr: false });
 const NavMenuMb = dynamic(() => import("./NavMenuMb"), { ssr: false });
+const ThemeSwitch = dynamic(() => import("./ThemeSwitch"), { ssr: false });
 
 export default function Header() {
   return (
@@ -36,7 +37,8 @@ export default function Header() {
             >
               Contact Us
             </a>
-            <div className="lg:ml-8 flex lg:items-center lg:border-l lg:border-slate-900/15 lg:pl-8">
+            <div className="lg:ml-8 flex lg:items-center lg:border-l lg:border-slate-900/15 lg:pl-8 dark:lg:border-slate-500">
+              <ThemeSwitch />
               <SignInHeader />
             </div>
           </div>

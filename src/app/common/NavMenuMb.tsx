@@ -7,6 +7,7 @@ import dynamic from "next/dynamic";
 import { CloseIcon, DotsVerticalRoundedIcon } from "@shared/icons";
 
 const SignInHeader = dynamic(() => import("./SignInHeader"), { ssr: false });
+const ThemeSwitch = dynamic(() => import("./ThemeSwitch"), { ssr: false });
 
 export default function NavMenuMb() {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -28,7 +29,7 @@ export default function NavMenuMb() {
           className="text-slate-500 w-8 h-8 flex items-center justify-center hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300 p-5"
         >
           <span className="sr-only">Navigation</span>
-          <DotsVerticalRoundedIcon fill="none" aria-hidden="true" />
+          <DotsVerticalRoundedIcon aria-hidden="true" />
         </button>
       </div>
 
@@ -99,9 +100,7 @@ export default function NavMenuMb() {
               </ul>
 
               <div className="mt-6 pt-6 border-t border-slate-200 dark:border-slate-200/10">
-                <div className="flex items-center justify-between">
-                  add more
-                </div>
+                <ThemeSwitch isMobile />
               </div>
             </Dialog.Panel>
           </Transition.Child>

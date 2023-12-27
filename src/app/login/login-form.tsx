@@ -52,7 +52,7 @@ export default function LoginForm() {
         <div>
           <label
             htmlFor="email"
-            className="block text-sm font-medium leading-6 text-gray-900"
+            className="block text-sm font-medium leading-6 text-gray-900 dark:text-stone-300"
           >
             Email address
           </label>
@@ -78,14 +78,14 @@ export default function LoginForm() {
           <div className="flex items-center justify-between">
             <label
               htmlFor="password"
-              className="block text-sm font-medium leading-6 text-gray-900"
+              className="block text-sm font-medium leading-6 text-gray-900 dark:text-stone-300"
             >
               Password
             </label>
             <div className="text-sm">
               <a
                 href="#"
-                className="font-semibold text-secondary hover:text-cyan-700"
+                className="font-semibold text-secondary hover:text-cyan-700 dark:text-cyan-300 dark:hover:text-amber-300"
               >
                 Forgot password?
               </a>
@@ -112,18 +112,18 @@ export default function LoginForm() {
           <button
             type="submit"
             disabled={submitting}
-            className="flex w-full justify-center rounded-md bg-primary px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary disabled:bg-primary/50"
+            className="flex w-full justify-center rounded-md bg-primary px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary disabled:bg-primary/50 dark:hover:bg-amber-500"
           >
             Sign in
           </button>
         </div>
       </form>
 
-      <p className="mt-10 text-sm text-center text-gray-500">
+      <p className="mt-10 text-sm text-center text-gray-500 dark:text-stone-300">
         Not a member?{" "}
         <a
           href="#"
-          className="font-semibold leading-6 text-secondary hover:text-primary"
+          className="font-semibold leading-6 text-secondary hover:text-primary dark:text-cyan-300 dark:hover:text-amber-300"
         >
           Create An Account
         </a>

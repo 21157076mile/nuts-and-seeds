@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect } from "react";
 
 import CityService from "@shared/services/city.service";
